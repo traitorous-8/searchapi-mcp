@@ -33,7 +33,7 @@ async def _fetch_search_results(
     filtered_params = {k: v for k, v in params.items() if v is not None}
 
     try:
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(timeout=30.0) as client:
             response = await client.get(
                 SEARCH_API_URL, headers=headers, params=filtered_params
             )
