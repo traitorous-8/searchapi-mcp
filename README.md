@@ -12,6 +12,16 @@ MCP server exposing SearchApi.io real-time SERP data (Google, Shopping, Jobs, Yo
 | `google_jobs` | `google_jobs` | `query`, `location`, `hl` | Google Jobs Search |
 | `youtube_search` | `youtube` | `query`, `hl`, `gl` | YouTube Search |
 
+## Example
+
+All tools return structured JSON from SearchApi.io. For example, calling:
+
+```python
+google_shopping(query="mechanical keyboard", num=5, gl="us")
+```
+
+returns structured product listings with details such as prices, ratings, sellers, and product URLs.
+
 ## Setup
 
 1. Install the dependencies:
